@@ -20,9 +20,8 @@ public class CasosDeTesteAccentureSteps {
 	@Before
 	public void setup() {
 
-		System.setProperty("webdriver.chrome.driver", 
-				"C:\\Users\\Pri\\Google Drive (priscillaabcardoso@gmail.com)\\QA Gama Academy\\WebDriver\\chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
+		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		
 		wait	=	new	WebDriverWait(driver,	15);
@@ -31,7 +30,7 @@ public class CasosDeTesteAccentureSteps {
 	
 	@Dado("que eu estou no site da accenture")
 	public void que_eu_estou_no_site_da_accenture() {
-	driver.get("https://www.accenture.com/br-pt");	   
+	driver.get("https://www.accenture.com/br-pt");	
 	}
 
 	@Dado("aceito os termos LGPD")

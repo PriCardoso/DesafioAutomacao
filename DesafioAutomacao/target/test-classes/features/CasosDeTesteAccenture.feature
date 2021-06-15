@@ -17,6 +17,8 @@
 			E devo ver "Cookies Analíticos de Primeira Parte"
 			E devo ver "Cookies de Desempenho e Cookies Funcionais"
 			E devo ver "Cookies de Publicidade e Redes Sociais"
+			
 
-	
-		
+
+
+			
