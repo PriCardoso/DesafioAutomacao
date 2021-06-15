@@ -1,4 +1,4 @@
-# Desafio de Automacao :dart:
+# Desafio de Automação :dart:
 
 <b>Integrantes:</b></br>
 	<ul>
