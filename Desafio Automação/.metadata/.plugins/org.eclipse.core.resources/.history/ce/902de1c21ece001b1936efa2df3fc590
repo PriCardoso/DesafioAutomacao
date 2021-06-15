@@ -2,8 +2,6 @@ package steps;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,9 +18,8 @@ public class CaseTesteSobreAAccentureSteps {
 	
 	@Before
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/home/luciene/Documentos/driver/chromedriver");
 		driver = new ChromeDriver(); 	
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
 		

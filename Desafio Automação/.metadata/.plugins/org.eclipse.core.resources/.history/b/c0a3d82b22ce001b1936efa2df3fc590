@@ -23,7 +23,6 @@ public class CaseAceitarCookiesSteps {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();		
 		
 		wait	=	new	WebDriverWait(driver,30);
@@ -52,6 +51,7 @@ public class CaseAceitarCookiesSteps {
 	}
 	@After
 	public void dps() {
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.quit();
 	}
 
