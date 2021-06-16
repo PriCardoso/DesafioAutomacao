@@ -82,8 +82,8 @@ public class FuncionalidadeCarreiras {
 
 			for (int i = 0; i < jobList; i++) {
 				String job = jobs.get(i).getText();
-				int numJob = job.indexOf(vagas);
-				if (numJob == 1) {
+				int jobSearch = job.indexOf(vagas);
+				if (jobSearch== 1) {
 					assertEquals(1, 1);
 				}
 
