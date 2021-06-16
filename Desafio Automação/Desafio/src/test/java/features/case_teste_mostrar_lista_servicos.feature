@@ -1,4 +1,6 @@
 #language: pt
+@run
+@test
 Funcionalidade: Acessar o site da accenture a mostrar a lista de serviços
 
   Cenário: Clicar no serviço cloud

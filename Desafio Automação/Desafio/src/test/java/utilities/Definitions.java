@@ -28,6 +28,7 @@ public class Definitions {
 	public static void finalizarDriver() {
 		if(driver != null) {
 			driver.quit();
+			driver = null;
 		}
 	}
 	

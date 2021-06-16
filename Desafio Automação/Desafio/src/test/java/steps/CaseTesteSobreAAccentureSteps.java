@@ -36,13 +36,13 @@ public class CaseTesteSobreAAccentureSteps extends Base{
 	}
 	
 
-	@Então("devo ver o {string} em {string}")
-	public void devo_ver_o_em(String string, String string2) {
+	@Então("devo ver o destaque em {string}")
+	public void devo_ver_o_em(String destaque) {
 		  driver.findElement(By.className("sectionTitle")); 
 		  String frase = driver.findElement(By.className("sectionTitle")).getText();
 		  System.out.println(frase);
 		  System.out.println("Nosso propósito:");
-		  assertEquals(frase, "Nosso propósito:");		  
+		  assertEquals(frase, destaque);		  
 	}
 	
 }

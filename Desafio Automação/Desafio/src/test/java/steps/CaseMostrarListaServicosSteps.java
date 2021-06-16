@@ -12,13 +12,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.it.Quando;
+import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import utilities.Base;
 import utilities.Definitions;
 
 
 public class CaseMostrarListaServicosSteps extends Base{
-	
+	@Dado("que eu estou no site da accenture")
+	public void que_eu_estou_no_site_da_accenture() {
+		driver.get("https://www.accenture.com/br-pt");
+	}
 	
 	@Quando("clico no menu serviços")
 	public void clico_no_menu_serviços() throws InterruptedException {
@@ -33,7 +37,7 @@ public class CaseMostrarListaServicosSteps extends Base{
 
 	@Então("devo encontrar o título {string}")
 	public void devo_encontrar_o_título(String titulo) {
-		String tituloObtido = driver.findElement(By.xpath("//h1[text()=\\\"Serviços de Cloud\\\"]")).getText(); 
+		String tituloObtido = driver.findElement(By.xpath("//h1[text()=\"Serviços de Cloud\"]")).getText(); 
 	    Assert.assertEquals(titulo, tituloObtido);
 	}
 

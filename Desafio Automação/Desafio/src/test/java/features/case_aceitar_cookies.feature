@@ -1,5 +1,6 @@
 #language: pt
 #encoding: utf-8
+@run
 Funcionalidade: Acessar o site da accenture e aceitar os cookies do LGPD
 
   Cenário: Aceitar o cookie LGPD
