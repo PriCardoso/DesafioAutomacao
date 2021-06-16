@@ -9,27 +9,17 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
+import utilities.Base;
+import utilities.Definitions;
+
 import static org.junit.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
 
-public class CaseAceitarCookiesSteps {
+public class CaseAceitarCookiesSteps extends Base{
+	//WebDriver driver = new Definitions().iniciarDriver();
 	
-	WebDriver driver;
-	WebDriverWait wait;
 
-	@Before
-	public void setup() {
-
-		System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().window().maximize();		
-		
-		wait	=	new	WebDriverWait(driver,30);
-
-	}
-	
 	@Dado("que estou no site da accenture")
 	public void que_estou_no_site_da_accenture() {
 		driver.get("https://www.accenture.com/br-pt");	    
@@ -50,9 +40,6 @@ public class CaseAceitarCookiesSteps {
 		assertEquals("Accenture | Brasil| Que venha a mudança", driver.getTitle());
 		System.out.println(driver.getTitle());
 	}
-	@After
-	public void dps() {
-		driver.quit();
-	}
+	
 
 }
