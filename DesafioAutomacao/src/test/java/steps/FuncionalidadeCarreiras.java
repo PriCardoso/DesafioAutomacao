@@ -2,7 +2,9 @@ package steps;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.concurrent.TimeUnit;
+
+import java.util.List;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -68,14 +70,29 @@ public class FuncionalidadeCarreiras {
 
 	@Então("devo encontrar vagas para {string}")
 	public void devo_encontrar_vagas_para(String vagas) throws InterruptedException {
-				
+
 		synchronized (driver) {
 			driver.wait(2 * 1000);
 		}
-			String jobs = driver.findElement(By.xpath("//*[@id='latest-jobs']/div[1]/div[1]/a/div/div/h3"))
-					.getText();			
-			assertEquals(vagas,jobs);
 
+		List<WebElement> jobs = driver.findElements(By.className("job-listing-description"));
+		int jobList = jobs.size();
+
+		if (jobList > 0) {
+
+			for (int i = 0; i < jobList; i++) {
+				String job = jobs.get(i).getText();
+				int numJob = job.indexOf(vagas);
+				if (numJob == 1) {
+					assertEquals(1, 1);
+				}
+
+			}
+
+		} else {
+
+			assertEquals(1, 0);
+		}
 	}
 
 	@After

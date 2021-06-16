@@ -13,5 +13,5 @@
 				
 		Exemplos:
  			  |carreira				 |vagas					 |
-  		  |"desenvolvedor" |"Desenvolvedor FullStack"|
+  		  |"desenvolvedor" |"Software Engineering"|
   
